@@ -1,61 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Student Portal</title>
 </head>
 
 <body>
     <form action="loginPage.html" method="post">
+       
         <h1>Student Information Portal</h1>
-                
+
         <table border="5">
+       
             <tr>
                 <th>Labels</th>
                 <th>Inputs</th>
             </tr>
-
+       
             <tr>
                 <td>First Name:</td>
-                <td><input type="text" placeholder="Enter your First Name"></td>
+                <td><input type="text" placeholder="Enter your First Name" required></td>
             </tr>
-
+           
             <tr>
                 <td>Last Name:</td>
-                <td><input type="text" placeholder="Enter your Last Name"></td>
+                <td><input type="text" placeholder="Enter your Last Name" required></td>
             </tr>
-
             <tr>
                 <td>Student ID:</td>
-                <td><input type="number" placeholder="Enter your ID"></td>
+                <td><input type="number" placeholder="Enter your ID" required></td>
             </tr>
-
+           
             <tr>
                 <td>Email:</td>
-                <td><input type="email" placeholder="Enter your Email"></td>
+                <td><input type="email" placeholder="Enter your Email" required></td>
             </tr>
-
             <tr>
                 <td>Password:</td>
-                <td><input type="password" placeholder="Enter your Password"></td>
+                <td><input type="password" placeholder="Enter your Password" required></td>
             </tr>
-
+           
             <tr>
                 <td>Date of Birth:</td>
-                <td><input type="date"></td>
+                <td><input type="date" required></td>
             </tr>
-
+           
             <tr>
                 <td>Gender:</td>
                 <td>
-                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Male" required> Male
                     <input type="radio" name="gender" value="Female"> Female
                     <input type="radio" name="gender" value="Other"> Other
                 </td>
             </tr>
-
             <tr>
                 <td>Hobbies:</td>
                 <td>
@@ -67,11 +64,10 @@
                     <input type="checkbox" name="hobby" value="Volleyball"> Volleyball
                 </td>
             </tr>
-
             <tr>
                 <td>Department:</td>
                 <td>
-                    <select>
+                    <select required>
                         <option value="">Select :</option>
                         <option value="CSE">CSE</option>
                         <option value="EEE">EEE</option>
@@ -83,27 +79,26 @@
                     </select>
                 </td>
             </tr>
-
             <tr>
                 <td>Address:</td>
-                <td><textarea placeholder="Enter your Address"></textarea></td>
+                <td><textarea placeholder="Enter your Address" required></textarea></td>
             </tr>
-
             <tr>
                 <td>Image:</td>
-                <td><input type="file"></td>
+                <td><input type="file" required></td>
             </tr>
-
+        
         </table>
-
+        
         <br>
         <br>
-
+        
         <button type="button">Input</button>
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
-        
+
     </form>
-    
+
 </body>
+
 </html>
