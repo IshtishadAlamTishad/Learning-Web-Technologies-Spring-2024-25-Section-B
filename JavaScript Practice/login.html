@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+
+<body>
+    
+    <h1 id="head">This is Login Page</h1>
+    <script>
+
+        function checkSame() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let msg = document.getElementById("msg");
+
+            if (username === "") {
+                msg.innerHTML = "Please type username first";
+                msg.style.color = 'red';
+                return false;
+
+            } else {
+                document.getElementById('head').innerHTML = username;
+                msg.innerHTML = "";
+            }
+
+            if (password === "") {
+                alert("Password cannot be empty!");
+                return false;
+            }
+            
+            let uSize = username.length
+            let pwdSize = password.length
+            if (uSize === pwdSize) {
+                let isSame = true;
+                for (let i=0;i<uSize;++i) {
+                    if (username[i] !==password[i]) {
+                        isSame = false;
+                        break;
+                    }
+                }
+                if (isSame) {
+                    alert("Username and password cannot be the same");
+                    return false;
+                }
+            }
+            return true;
+        }
+   
+    </script>
+   
+   <form action="homePage.html" method="post" onsubmit="return checkSame()">
+
+        <table border="5">
+
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="username" placeholder="Enter your username"></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password" placeholder="Enter your password"></td>
+            </tr>
+        </table>
+
+        <p id="msg"></p>
+        
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+    </form>
+  
+    <br>
+    <form action="ForgotPage.html" method="post">
+        <button type="submit">Forgot Password?</button>
+    </form>
+
+</body>
+
+</html>
